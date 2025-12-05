@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <p id = "text">red500</p>
+
+         <script>
+            document.getElementById("text").addEventListener("copy", function() {
+                alert("copied the text")
+            })
+        </script> 
+
+         <script>
+            document.getElementById("text").addEventListener("copy", function(e) {
+                e.preventDefault(); //stop the default behaviour of the copy
+                alert("copying is disabled for this site")
+            })
+        </script>
+
+
+    </body>
+</html>

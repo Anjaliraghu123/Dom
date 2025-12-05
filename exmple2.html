@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h3>product:Hedphone</h3> 
+   <button id="cartBtn">clicked</button>
+   <p>cart Item: <span id="cartcount">0</span></p>
+   
+   <script>
+    let count = 0;
+   const cartbtn = document.getElementById("addcartBtn");
+    const cartcount = document.getElementById("cartcount");
+   
+    cartBtn.addEventListener("click", function(){
+        count++;
+        cartcount.innerText = count;
+        cartcount.textContent = count;
+    });
+   </script>
+</body>
+</html>

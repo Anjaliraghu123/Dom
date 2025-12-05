@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dropdowns">
+        <button>Mens wear</button>
+        <div id="items">
+            <p >Shirts</p>
+            <p>Trousers</p>
+            <p>Jeans</p>
+        </div>
+    </div>
+    <script>
+        const dropdowns = document.getElementById("dropdowns");
+        const items = document.getElementById("items");
+
+        dropdowns.addEventListener("mousehover", function() {
+            items.style.display = "block";
+        });
+        dropdowns.addEventListener("mouseout", function() {
+            items.style.display = "none";
+        });
+    </script>
+</body>
+</html>

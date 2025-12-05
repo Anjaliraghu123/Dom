@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="username" placeholder="Enter your name" />
+   <p>Live priew: <span id="previw"></span> </p>
+
+<script>
+    document.getElementById("username").addEventListener("input", function(){
+        const inputText = this.value;
+        document.getElementById("previw").textContent = this.value;
+    });
+</script>
+<form id="myform">
+    <input type="email" id="email" placeholder="Enter your email"/>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+</form>
+<p id="message"></p>
+<script>
+    document.getElementById("email").addEventListener("change", function{
+    
+   const msg = document.getElementById("message");
+   if(this.value.includes("@")){
+       msg.textContent = "Valid email";
+       msg.style.color = "green";
+   } else {
+       msg.textContent = "Invalid email";
+       msg.style.color = "red";
+   }
+});
+   
+   document.getElementById("email").addEventListener("focus", function(event){
+     this.style.backgroundColor = "gray";
+});
+document.getElementById("email").addEventListener("blur", function(event){
+    this.style.backgroundColor = "merroon";
+});
+document.getElementById("email").addEventListener("reset", function(event){
+    this.style.backgroundColor = "skyblue";
+});
+document.getElementById("email").addEventListener("submit", function(event){
+    this.style.backgroundColor = "yellow";
+});
+
+</script>
+</body>
+
+</html>
